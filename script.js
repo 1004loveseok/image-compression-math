@@ -355,7 +355,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 result[y][x] =
-                    sum + 128;
+                    0.25*sum + 128;
             }
         }
 
