@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>행렬을 이용한 이미지 압축</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>행렬을 이용한 이미지 압축</h1>
+        <p>수학과 IT의 융합 탐구</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>1. 이미지 선택</h2>
+
+            <input type="file" id="imageInput" accept="image/*">
+
+            <div class="image-container">
+
+                <div>
+                    <h3>원본 이미지</h3>
+                    <canvas id="originalCanvas"></canvas>
+                </div>
+
+                <div>
+                    <h3>압축 이미지</h3>
+                    <canvas id="compressedCanvas"></canvas>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section>
+
+            <h2>2. 압축 정도 선택</h2>
+
+            <input
+                type="range"
+                id="compression"
+                min="10"
+                max="90"
+                value="50"
+            >
+
+            <span id="compressionValue">50</span>
+
+            <button onclick="compressImage()">
+                이미지 압축
+            </button>
+
+        </section>
+
+
+        <section>
+
+            <h2>3. 수학적 분석</h2>
+
+            <div class="result">
+
+                <p>
+                    MSE:
+                    <strong id="mse">-</strong>
+                </p>
+
+                <p>
+                    압축률:
+                    <strong id="ratio">-</strong>
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>4. 핵심 수학</h2>
+
+            <p>
+                이미지는 픽셀값의 행렬로 표현할 수 있다.
+            </p>
+
+            <div class="formula">
+
+                MSE =
+                (1/N) Σ(xᵢ - yᵢ)²
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
